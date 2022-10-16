@@ -1,24 +1,85 @@
 <!DOCTYPE html>
-<html lang = "pt-br">
-    <head>
-        <meta charset = "UTF8">
-        <title> Gerar Bilhete </title>
-        <link rel = "stylesheet" href = "Style/style.css">
+<html lang="pt-br">
 
-    </head>
+<head>
+    <meta charset="UTF8">
+    <title> Gerar Bilhete </title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/gerarbilhete.css">
 
-    <body>
-        <header class="cabeçalho">
-            <h1><img class="logo" src="imagens/BFAI branco.png"></h1>
+</head>
 
-				<nav>
-					<ul>
-						<li><a href = "index.html">Home</a></li>
-						<li><a href = "gerarBilhete.html">Gerar Bilhete</a></li>
-                        <li><a href = "recargaBilhete.html">Recarregar Bilhete</a></li>
-						<li><a href = "historicoBilhete.html">Meu Histórico</a></li>
-					</ul>
-				</nav>
-        </header>
-    </body>
+<iframe class="navbar" src="components/navbar.html" frameborder="0"></iframe>
+
+<body>
+
+
+    <div class="container">
+        <h1 class="title">Compre seu bilhete aqui</h1>
+        <div class="row">
+            <div class="col-4">
+                <img class="sqr-img" src="img/Unico.png" alt="">
+                <div class="container-text">
+                    <p class="texto">Esse bilhete é a melhor opção para você que deseja utilizá-lo apenas UMA VEZ. Mas não
+                        se preocupe, você terá integração com quantos transportes quiser dentro de um período de 40 minutos
+                        a partir do momento que realizar a leitura do Bilhete pela primeira vez!
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <img class="sqr-img" src="img/Duplo.png" alt="">
+                <div class="container-text">
+                    <p class="texto">Para você que deseja utilizar o Bilhete DUAS VEZES, essa é a melhor opção. O Bilhete
+                        Duplo disponibiliza um crédito que te permite, dentro de 40 min, pegar quantos transportes quiser.
+                        Se o seu tempo de integração acabar, você terá mais um crédito disponível para utilizar da mesma
+                        forma que usou da primeira vez. A integração de 40 minutos começa a contar a partir da leitura do
+                        Bilhete no transporte público.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <img class="sqr-img" src="img/Semanal.png" alt="">
+                <div class="container-text">
+                    <p class="texto">Está visitando a cidade e ficará aqui DURANTE UMA SEMANA? Essa é uma das ótimas
+                        oportunidades para adquirir um Bilhete Semanal!
+                        Esse bilhete disponibiliza créditos suficientes para você realizar quantas viagens quiser em um
+                        período de 7 dias. Você poderá trocar de transporte sem ter um limite de integração. Lembre-se que o
+                        período de sete dias começará a contar a partir da primeira utilização do seu Bilhete. Aproveite
+                        para conhecer os lugares mais lindos de nossa cidade!
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <img class="sqr-img" src="img/Mensal.png" alt="">
+                <div class="container-text">
+                    <p class="texto">É amante do BFAI ou precisa usar seu Bilhete TODOS OS DIAS? Adquira um Bilhete Mensal
+                        para ter créditos durante um período de 30 dias sem precisar se preocupar com tempo de integração
+                        entre transportes. A data de início da contagem de dias é a data da primeira utilização do Bilhete!
+                    </p>
+                </div>
+            </div>
+
+            <h1 class="title-2">Selecione o bilhete desejado</h1><br>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-2 d-flex">
+                <img class="sqr-img" src="img/Semanal.png" alt="">
+                <div class="button">
+                    <button>Confirmar Compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<iframe class="footer" src="components/footer.html" frameborder="0"></iframe>
+
 </html>
