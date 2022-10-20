@@ -1,0 +1,59 @@
+.title {
+    margin: 5vh;
+    font-size: 25px;
+}
+
+.content {
+    margin: 3vh;
+    font-size: 20px;
+    width: 50%;
+    
+
+}
+
+.imgRecarga {
+    width: 30%;
+    margin: 5vh;
+}
+
+.imgRecarga, .content {
+    display: inline-block;
+    
+}
+
+.solicitaId {
+    margin: 20px;
+    text-indent: 17px;
+}
+
+.input-id {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 35px;
+    border-width: 2px;
+    border-color: #71817f;
+    width: 15%;
+    font-size: 17px;
+    
+}
+
+.solicitaId label, .solicitaId legend {
+    display: block;
+    padding: 12px;
+    font-size: 17px;
+    
+}
+
+.ajuda {
+    margin: 5vh;
+}
+
+.mostrarId {
+    width: 40%;
+    float: right;
+    margin-top: 5vh;
+    margin-right: 55vh;
+    margin-bottom: 5vh;
+
+    
+}
