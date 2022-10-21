@@ -15,11 +15,14 @@
 .sqr-img{
     width: 450px;
     margin-bottom: 30px;
+    border-radius: 10px;
+    transition: 0.5s;
 }
 
 .sqr-img:hover {
     transform: scale(1.1);
     cursor: pointer;
+    
 }
 
 
@@ -69,11 +72,13 @@ button{
     border-radius: 20px;
     margin-top: 80px;
     margin-left: 90vh;
+    transition: 0.5s;
 }
 
 button:hover {
     background-color: #6C7B8B;
     transform: scale(1.1);
+    
 }
 
 .slc-ticket{

@@ -1,0 +1,88 @@
+.title {
+    margin: 5vh;
+    font-size: 25px;
+}
+
+.imgInicio {
+    width: 20%;
+    margin: 5vh;
+}
+
+.content {
+    margin: 3vh;
+    font-size: 20px;
+    width: 50%;
+}
+
+.imgRecarga, .content {
+    display: inline-block;
+    
+}
+
+.solicitaId {
+    margin: 20px;
+    text-indent: 17px;
+}
+
+.input-id {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 25px;
+    border-width: 2px;
+    border-color: #71817f;
+    width: 15%;
+    font-size: 17px;
+    
+}
+
+.solicitaId label, .solicitaId legend {
+    display: block;
+    padding: 12px;
+    font-size: 17px;
+    
+}
+
+.consultar {
+    width: 20%;
+    font-size: 15px;
+    padding: 10px;
+    margin: 20px;
+    margin-right: 80px;
+    border-radius: 15px;
+    background-color: #FFFAFA;
+    transition: 1s all;
+}
+
+.consultar:hover {
+    transform: scale(1.1);
+    cursor: pointer;    
+}
+
+h3 {
+    margin: 20px;
+}
+
+table {
+    margin: 20px;
+    display: inline-block;
+}
+
+.tableGeracao tr {
+    padding: 10px;
+   
+}
+
+.tableGeracao td {
+    padding: 15px;
+    background-color: #DBE9F4;
+}
+
+.tableUso tr {
+    padding: 10px;
+   
+}
+
+.tableUso td {
+    padding: 15px;
+    background-color: #DBE9F4;
+}

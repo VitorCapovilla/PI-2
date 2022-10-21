@@ -7,13 +7,15 @@
     margin: 3vh;
     font-size: 20px;
     width: 50%;
-    
+    text-align: justify;    
 
 }
 
 .imgRecarga {
     width: 30%;
     margin: 5vh;
+    border-radius: 10px;
+    float: left;
 }
 
 .imgRecarga, .content {
@@ -29,7 +31,7 @@
 .input-id {
     margin: 5px;
     padding: 10px;
-    border-radius: 35px;
+    border-radius: 25px;
     border-width: 2px;
     border-color: #71817f;
     width: 15%;
@@ -44,16 +46,38 @@
     
 }
 
+.confirmar {
+    width: 20%;
+    font-size: 15px;
+    padding: 10px;
+    margin: 20px;
+    margin-right: 80px;
+    border-radius: 15px;
+    background-color: #FFFAFA;
+    transition: 1s all;
+    float: right;
+}
+
+.confirmar:hover {
+    transform: scale(1.1);
+    cursor: pointer;    
+}
+
 .ajuda {
     margin: 5vh;
 }
 
-.mostrarId {
+.ajuda p {
+    margin: 2vh;
+}
+
+.imgMostrarId {
     width: 40%;
     float: right;
     margin-top: 5vh;
     margin-right: 55vh;
     margin-bottom: 5vh;
+    border-radius: 10px;
 
     
 }

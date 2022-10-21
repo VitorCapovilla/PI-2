@@ -14,29 +14,35 @@
 <body>
     <div class="inicio">
         <h1 class="title"> Recarregue aqui seu Bilhete!</h1>
-        <img class="imgRecarga" src="img/recaraga.png">
+        <img class="imgRecarga" src="img/Recarga.png">
         <p class="content"> Aqui você pode recarregar seu Bilhete e escolher o tipo de recarga que melhor se adaptar às suas necessidas.
             Não se preocupe em gerar outro Bilhete, você pode usar o seu mesmo com uma nova categoria de uso.
         </p>
     </div>
 
-    <form class="solicitaId">
-        
-        <label for="idBilhete"> ID do Bilhete: </label>
-        <input type="text" id="idBilhete" class="input-id" required placeholder="XXX . XXX . XXX - XX">
+    <div class="formulario">
+        <form class="solicitaId">
+            
+            <label for="idBilhete"> ID do Bilhete: </label>
+            <input type="text" id="idBilhete" class="input-id" required placeholder="XXX . XXX . XXX - XX">
 
-        <fieldset>
-            <legend> Escolha o tipo da recarga</legend>
-            <label for="unico"> <input type="radio" name="tipoBilhete"  value="unico" id="unico" checked> Único </label>
-            <label for="duplo"> <input type="radio" name="tipoBilhete"  value="duplo" id="duplo"> Duplo </label>
-            <label for="semanal"> <input type="radio" name="tipoBilhete"  value="semanal" id="semanal"> Semanal </label>
-            <label for="mensal"> <input type="radio" name="tipoBilhete"  value="mensal" id="mensal"> Mensal </label>
-        </fieldset>
-    </form>
+            <fieldset>
+                <legend> Escolha o tipo da recarga</legend>
+                <label for="unico"> <input type="radio" name="tipoBilhete"  value="unico" id="unico" checked> Único </label>
+                <label for="duplo"> <input type="radio" name="tipoBilhete"  value="duplo" id="duplo"> Duplo </label>
+                <label for="semanal"> <input type="radio" name="tipoBilhete"  value="semanal" id="semanal"> Semanal </label>
+                <label for="mensal"> <input type="radio" name="tipoBilhete"  value="mensal" id="mensal"> Mensal </label>
+            </fieldset>
+
+            <input type = "submit" value = "Confirmar Recarga" class="confirmar">
+        </form>
+    </div>
+
 
     <div class="ajuda">
         <h3> Não sabe onde encontrar o ID no seu Bilhete?</h3>
-        <img class="mostrarId" src="img/mostrarId.png">
+        <p> O ID fica localizado na parte forntal da imagem logo abaixo da identificação do tipo do seu Bilhete.</p>
+        <img class="imgMostrarId" src="img/mostrarId.png">
     </div>
 </body>
 

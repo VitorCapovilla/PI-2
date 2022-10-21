@@ -11,6 +11,10 @@
     width: 100%;
 }
 
+body {
+    background-color: 	#FFFAFA;
+}
+
 .footer{
     bottom: 0;
     position: relative;
