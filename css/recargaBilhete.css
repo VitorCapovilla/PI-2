@@ -1,10 +1,12 @@
 .title {
     margin: 5vh;
     font-size: 25px;
+    display: inline-block;
 }
 
 .content {
-    margin: 3vh;
+    margin-top: 20px;
+    margin-left: 50px;
     font-size: 20px;
     width: 50%;
     text-align: justify;    
@@ -12,10 +14,11 @@
 }
 
 .imgRecarga {
-    width: 30%;
-    margin: 5vh;
+    width: 25%;
+    margin-top: 70px;
+    margin-right: 70px;
     border-radius: 10px;
-    float: left;
+    float: right;
 }
 
 .imgRecarga, .content {
@@ -24,7 +27,8 @@
 }
 
 .solicitaId {
-    margin: 20px;
+    margin: 50px;
+    margin-right: 40%;
     text-indent: 17px;
 }
 
@@ -47,15 +51,15 @@
 }
 
 .confirmar {
-    width: 20%;
-    font-size: 15px;
+    width: 30%;
+    font-size: 20px;
     padding: 10px;
-    margin: 20px;
-    margin-right: 80px;
+    margin-top: 50px;
+    margin-left: 400px;
     border-radius: 15px;
-    background-color: #FFFAFA;
+    background-color: #EDDBD5;
+    border: NONE;
     transition: 1s all;
-    float: right;
 }
 
 .confirmar:hover {
@@ -65,6 +69,7 @@
 
 .ajuda {
     margin: 5vh;
+    
 }
 
 .ajuda p {
@@ -72,12 +77,9 @@
 }
 
 .imgMostrarId {
-    width: 40%;
-    float: right;
-    margin-top: 5vh;
-    margin-right: 55vh;
+    width: 35%;
+    margin-top: 2vh;
     margin-bottom: 5vh;
-    border-radius: 10px;
-
-    
+    margin-left: 2vh;
+    border-radius: 10px;    
 }

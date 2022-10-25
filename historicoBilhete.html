@@ -14,14 +14,14 @@
 <body>
     <div class="inicio">
         <h1 class="title"> Consulte seu Saldo e Histórico de Uso</h1>
-        <img class="imgInicio" src="img/verdeRosa.png"> 
+        <img class="imgInicio" src="img/imgHistorico.png"> 
         <p class="content"> Com o ID do seu Bilhete, você pode consultar seu saldo atual e o histórico de uso,
                             com data e hora da geração e de todas as suas viagens!
         </p>
     </div>
 
     <form class="solicitaId"> 
-        <label for="idBilhete"> ID do Bilhete: </label>
+        <label for="idBilhete"><b> ID do Bilhete: </b></label>
         <input type="text" id="idBilhete" class="input-id" required placeholder="XXX . XXX . XXX - XX">
     </form>
 
@@ -66,6 +66,28 @@
             </tr>
         </tbody>
     </table>
+
+    <h3> Dados Recarga do Bilhete: </h3>
+    <table class="tableGeracao">
+        <thead>
+            <tr>
+                <td> Número do Bilhete </td>
+                <td> Categoria da Recarga </td>
+                <td> Valor da Recarga </td>
+                <td> Data / Hora da Recarga </td>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td> XXX . XXX . XXX - XX </td>
+                <td> Mensal </td>
+                <td> R$ xx,xx</td>
+                <td> dd/mm/aa hh:min:seg </td>
+            </tr>
+        </tbody>
+    </table>
+
 
 </body>
 

@@ -84,22 +84,29 @@
     width: 50%;
 }
 
-button{
-    cursor: pointer;
-    font-weight: bold;
-    padding: 20px;
-    background-color: #292c2f;
-    color: white;
-    font-size: 20px;
-    border-radius: 20px;
-    margin-top: 80px;
-    margin-left: 90vh;
+.imgSeuBilhete {
+    width: 650px;
+    margin-bottom: 30px;
+    margin-left: 500px;
+    border-radius: 10px;
     transition: 0.5s;
 }
 
-button:hover {
-    background-color: #6C7B8B;
+.consultar {
+    width: 450px;
+    padding: 10px;
+    background-color: #EDDBD5;
+    font-size: 20px;
+    border-radius: 15px;
+    border: none;
+    margin-top: 140px;
+    transition: 0.5s;
+    margin-left: 300px;
+}
+
+.consultar:hover {
     transform: scale(1.1);
+    cursor: pointer;
     
 }
 
@@ -108,8 +115,9 @@ button:hover {
 }
 
 .title-2{
-    margin-bottom: 30px;
-    font-size: 25px;
+    margin-top: 40px;
+    margin-left: 600px;
+    font-size: 30px;
 }
 
 .d-flex{

@@ -29,6 +29,7 @@ header{
 
 .nav-item{
     list-style-type: none;
+    text-align: center;
 }
 
 .navbar .list-nav{
