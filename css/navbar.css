@@ -40,7 +40,7 @@ header{
 .navbar .list-nav .nav-item .item-text{
     display: block;
     color: white;
-    font-size: 20px;
+    font-size: 15px;
     padding: 8px 20px;
     transition: .2s;
     margin: 0 5px;
@@ -48,8 +48,8 @@ header{
 }
 
 .navbar .list-nav .nav-item .item-text:hover{
-    color: #292c2f;
-    background-color: white;
+    font-size: 17px;
+    color: #b1dbd6;
 }
 
 @media only screen and (max-width: 1400px){
