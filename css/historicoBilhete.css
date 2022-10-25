@@ -5,13 +5,16 @@
 
 .imgInicio {
     width: 20%;
-    margin: 5vh;
+    margin-left: 5%;
 }
 
 .content {
     margin: 3vh;
     font-size: 20px;
     width: 50%;
+    float: right;
+    margin-top: 160px;
+    padding-right: 14%;
 }
 
 .imgRecarga, .content {
@@ -22,6 +25,8 @@
 .solicitaId {
     margin: 20px;
     text-indent: 17px;
+    margin-left: 45%;
+    
 }
 
 .input-id {
@@ -32,7 +37,6 @@
     border-color: #71817f;
     width: 15%;
     font-size: 17px;
-    
 }
 
 .solicitaId label, .solicitaId legend {
@@ -51,11 +55,13 @@
     border-radius: 15px;
     background-color: #FFFAFA;
     transition: 1s all;
+    margin-left: 40%;
 }
 
 .consultar:hover {
     transform: scale(1.1);
-    cursor: pointer;    
+    cursor: pointer; 
+    background-color: rgb(147, 214, 228);   
 }
 
 h3 {
@@ -79,10 +85,13 @@ table {
 
 .tableUso tr {
     padding: 10px;
-   
 }
 
 .tableUso td {
     padding: 15px;
     background-color: #DBE9F4;
+}
+
+.tableUso{
+    float: right;
 }
