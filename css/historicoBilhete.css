@@ -6,15 +6,18 @@
 .imgInicio {
     width: 20%;
     margin-left: 5%;
+    margin-top: 100px;
+    display: inline-block;
 }
 
 .content {
-
+    text-align: justify;
     font-size: 20px;
     width: 50%;
     float: right;
-    margin-top: 60px;
+    margin-top: 20px;
     padding-right: 10%;
+    line-height: 1.5;
 }
 
 .imgRecarga, .content {
@@ -31,11 +34,17 @@
 
 .input-id {
     margin: 5px;
+    margin-left: 150px;
     padding: 10px;
     border-radius: 25px;
     border-color: #71817f;
-    width: 20%;
+    width: 30%;
     font-size: 17px;
+    text-align: center;
+}
+
+.solicitaId label {
+    margin-left: 195px;
 }
 
 .solicitaId label, .solicitaId legend {
@@ -50,12 +59,11 @@
     font-size: 20px;
     padding: 10px;
     margin: 20px;
-    margin-right: 80px;
     border-radius: 15px;
     background-color: #EDDBD5;
     border: none;
     transition: 1s all;
-    margin-left: 40%;
+    margin-left: 745px;
 }
 
 .consultar:hover {

@@ -1,10 +1,11 @@
 .fraseInicio{
-    font-size: 35px;
+    font-size: 25px;
     margin: 5vh;
 }
 
 .contentInicio {
-    margin: 3vh;
+    margin-bottom: 30px;
+    margin-left: 50px;
     font-size: 20px;
 }
 
@@ -67,8 +68,8 @@
 /*outro*/
 
 .botoesRapidos h2 {
-    margin-top: 3vh;
-    margin-left: 3vh;
+    margin-top: 60px;
+    margin-left: 40px;
     margin-bottom: 1vh;
 }
 
@@ -82,7 +83,8 @@
     text-decoration: none;
     font-size: 20px;
     color: black;
-    margin: 5vh;
+    margin: 30px;
+    margin-bottom: 70px;
     border: 2px solid black;
     border-radius: 15px;
     padding: 15px;
