@@ -23,7 +23,7 @@
         <div class="row">
             <div class="col-4">
                 <h3 class="nomeBilhete"> Bilhete Único</h3>
-                <img class="sqr-img" src="img/Unico.png" alt="">
+                <img onclick="UnicoEscolhido()" class="sqr-img" src="img/Unico.png" alt="">
         
                 <div class="container-text">
                     <p class="valor"> R$ 4,00</p>
@@ -83,6 +83,7 @@
             
 
             <h1 class="title-2"> Este é o seu Bilhete: </h1><br>
+            <span id="imgB"></span>
 
         </div>
     </div>
@@ -90,7 +91,7 @@
     <div class="container">
         <div class="row">
             <div class="col-2 d-flex">
-                <img class="imgSeuBilhete" src="img/Semanal.png" alt="">
+                <!--<img class="imgSeuBilhete" src="img/Semanal.png" alt="">-->
                 <div class="button">
                     <!--<input type = "submit" value = "Confirmar Compra" class="consultar">-->
                 </div>
@@ -104,14 +105,7 @@
     
     <div class="seuID" id="resp"></div>
 
-    <script type="text/javascript">
-        function gerar()
-        {
-          var resp = document.getElementById('resp');
-          resp.innerHTML = Math.random();
-        }
-       </script>
-
+    <script type="text/javascript" src="js/gerarBilhete.js"></script>
 </body>
 
 <iframe class="footer" src="components/footer.html" frameborder="0"></iframe>
