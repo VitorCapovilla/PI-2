@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/gerarbilhete.css">
 
+    
+
 </head>
 
 <iframe class="navbar" src="components/navbar.html" frameborder="0"></iframe>
@@ -22,6 +24,7 @@
             <div class="col-4">
                 <h3 class="nomeBilhete"> Bilhete Único</h3>
                 <img class="sqr-img" src="img/Unico.png" alt="">
+        
                 <div class="container-text">
                     <p class="valor"> R$ 4,00</p>
                     <p class="explicaValor"> ( valor inteiro unitário )</p>
@@ -29,7 +32,7 @@
                         se preocupe, você terá integração com quantos transportes quiser dentro de um período de 40 minutos
                         a partir do momento que realizar a leitura do Bilhete pela primeira vez!
                     </p>
-                
+                    
                 </div>
             </div>
 
@@ -68,14 +71,16 @@
                 <h3 class="nomeBilhete"> Bilhete Mensal</h3>
                 <img class="sqr-img" src="img/Mensal.png" alt="">
                 <div class="container-text">
-                    <p class="valor"> R$ 108,00</p>
-                    <p class="explicaValor"> ( 10% de desconto sobre o valor unitário )</p>
+                    <p class="valor"> R$ 90,00</p>
+                    <p class="explicaValor"> ( 25% de desconto sobre o valor unitário )</p>
                     <p class="texto">É amante do BFAI ou precisa usar seu Bilhete <b>TODOS OS DIAS</b>? Adquira um Bilhete Mensal
                         para ter créditos durante um período de 30 dias sem precisar se preocupar com tempo de integração
                         entre transportes. A data de início da contagem de dias é a data da primeira utilização do Bilhete!
                     </p>
                 </div>
             </div>
+            
+            
 
             <h1 class="title-2"> Este é o seu Bilhete: </h1><br>
 
@@ -87,11 +92,25 @@
             <div class="col-2 d-flex">
                 <img class="imgSeuBilhete" src="img/Semanal.png" alt="">
                 <div class="button">
-                    <input type = "submit" value = "Confirmar Compra" class="consultar">
+                    <!--<input type = "submit" value = "Confirmar Compra" class="consultar">-->
                 </div>
             </div>
         </div>
     </div>
+
+    <button class="consultar" onclick="gerar()">Gerar Bilhete</button>
+    
+    <h1 class="fraseID">O ID do seu Bilhete é:</h1>
+    
+    <div class="seuID" id="resp"></div>
+
+    <script type="text/javascript">
+        function gerar()
+        {
+          var resp = document.getElementById('resp');
+          resp.innerHTML = Math.random();
+        }
+       </script>
 
 </body>
 
