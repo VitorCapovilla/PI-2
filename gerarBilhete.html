@@ -6,108 +6,105 @@
     <title> Gerar Bilhete </title>
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/gerarbilhete.css">
-
     
-
+    
+    
 </head>
 
 <iframe class="navbar" src="components/navbar.html" frameborder="0"></iframe>
 
 <body>
-
-
+    
+    
     <div class="container">
         <h1 class="title">Compre seu bilhete aqui</h1>
         <h2 class="content"> Abaixo temos uma breve explicação do funcionamento de cada tipo de Bilhete. Para solicitar a geração do seu,
-            clique sobra a ilustração daquele que você desja adquirir! </h2>
-        <div class="row">
-            <div class="col-4">
-                <h3 class="nomeBilhete"> Bilhete Único</h3>
-                <img onclick="UnicoEscolhido()" class="sqr-img" src="img/Unico.png" alt="">
-        
-                <div class="container-text">
-                    <p class="valor"> R$ 4,00</p>
-                    <p class="explicaValor"> ( valor inteiro unitário )</p>
-                    <p class="texto">Esse bilhete é a melhor opção para você que deseja utilizá-lo apenas <b>UMA VEZ</b>. Mas não
-                        se preocupe, você terá integração com quantos transportes quiser dentro de um período de 40 minutos
-                        a partir do momento que realizar a leitura do Bilhete pela primeira vez!
-                    </p>
+            selecione a opção desejada na lista de Bilhetes.</h2>
+            <div class="row">
+                <div class="col-4">
+                    <h3 class="nomeBilhete"> Bilhete Único</h3>
+                    <img class="sqr-img" src="img/Unico.png">
                     
+                    <div class="container-text">
+                        <p class="valor"> R$ 4,00</p>
+                        <p class="explicaValor"> ( valor inteiro unitário )</p>
+                        <p class="texto">Esse bilhete é a melhor opção para você que deseja utilizá-lo apenas <b>UMA VEZ</b>. Mas não
+                            se preocupe, você terá integração com quantos transportes quiser dentro de um período de 40 minutos
+                            a partir do momento que realizar a leitura do Bilhete pela primeira vez!
+                        </p>
+                        
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-4">
-                <h3 class="nomeBilhete"> Bilhete Duplo</h3>
-                <img class="sqr-img" src="img/Duplo.png" alt="">
-                <div class="container-text">
-                    <p class="valor"> R$ 7,50</p>
-                    <p class="explicaValor"> ( 6% de desconto sobre o valor unitário )</p>
-                    <p class="texto">Para você que deseja utilizar o Bilhete <b>DUAS VEZES</b>, essa é a melhor opção. O Bilhete
-                        Duplo disponibiliza um crédito que te permite, dentro de 40 min, pegar quantos transportes quiser.
-                        Se o seu tempo de integração acabar, você terá mais um crédito disponível para utilizar da mesma
-                        forma que usou da primeira vez. A integração de 40 minutos começa a contar a partir da leitura do
-                        Bilhete no transporte público.
-                    </p>
+                
+                <div class="col-4">
+                    <h3 class="nomeBilhete"> Bilhete Duplo</h3>
+                    <img class="sqr-img" src="img/Duplo.png">
+                    <div class="container-text">
+                        <p class="valor"> R$ 7,50</p>
+                        <p class="explicaValor"> ( 6% de desconto sobre o valor unitário )</p>
+                        <p class="texto">Para você que deseja utilizar o Bilhete <b>DUAS VEZES</b>, essa é a melhor opção. O Bilhete
+                            Duplo disponibiliza um crédito que te permite, dentro de 40 min, pegar quantos transportes quiser.
+                            Se o seu tempo de integração acabar, você terá mais um crédito disponível para utilizar da mesma
+                            forma que usou da primeira vez. A integração de 40 minutos começa a contar a partir da leitura do
+                            Bilhete no transporte público.
+                        </p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-4">
-                <h3 class="nomeBilhete"> Bilhete Semanal</h3>
-                <img class="sqr-img" src="img/Semanal.png" alt="">
-                <div class="container-text">
-                    <p class="valor"> R$ 25,70</p>
-                    <p class="explicaValor"> ( 8% de desconto sobre o valor unitário )</p>
-                    <p class="texto">Está visitando a cidade e ficará aqui <b>DURANTE UMA SEMANA</b>? Essa é uma das ótimas
-                        oportunidades para adquirir um Bilhete Semanal!
-                        Esse bilhete disponibiliza créditos suficientes para você realizar quantas viagens quiser em um
-                        período de 7 dias. Você poderá trocar de transporte sem ter um limite de integração. Lembre-se que o
-                        período de sete dias começará a contar a partir da primeira utilização do seu Bilhete. Aproveite
-                        para conhecer os lugares mais lindos de nossa cidade!
-                    </p>
+                
+                <div class="col-4">
+                    <h3 class="nomeBilhete"> Bilhete Semanal</h3>
+                    <img class="sqr-img" src="img/Semanal.png">
+                    <div class="container-text">
+                        <p class="valor"> R$ 25,70</p>
+                        <p class="explicaValor"> ( 8% de desconto sobre o valor unitário )</p>
+                        <p class="texto">Está visitando a cidade e ficará aqui <b>DURANTE UMA SEMANA</b>? Essa é uma das ótimas
+                            oportunidades para adquirir um Bilhete Semanal!
+                            Esse bilhete disponibiliza créditos suficientes para você realizar quantas viagens quiser em um
+                            período de 7 dias. Você poderá trocar de transporte sem ter um limite de integração. Lembre-se que o
+                            período de sete dias começará a contar a partir da primeira utilização do seu Bilhete. Aproveite
+                            para conhecer os lugares mais lindos de nossa cidade!
+                        </p>
+                    </div>
                 </div>
-            </div>
-
-            <div class="col-4">
-                <h3 class="nomeBilhete"> Bilhete Mensal</h3>
-                <img class="sqr-img" src="img/Mensal.png" alt="">
-                <div class="container-text">
-                    <p class="valor"> R$ 90,00</p>
-                    <p class="explicaValor"> ( 25% de desconto sobre o valor unitário )</p>
-                    <p class="texto">É amante do BFAI ou precisa usar seu Bilhete <b>TODOS OS DIAS</b>? Adquira um Bilhete Mensal
-                        para ter créditos durante um período de 30 dias sem precisar se preocupar com tempo de integração
-                        entre transportes. A data de início da contagem de dias é a data da primeira utilização do Bilhete!
-                    </p>
+                
+                <div class="col-4">
+                    <h3 class="nomeBilhete"> Bilhete Mensal</h3>
+                    <img class="sqr-img" src="img/Mensal.png">
+                    <div class="container-text">
+                        <p class="valor"> R$ 90,00</p>
+                        <p class="explicaValor"> ( 25% de desconto sobre o valor unitário )</p>
+                        <p class="texto">É amante do BFAI ou precisa usar seu Bilhete <b>TODOS OS DIAS</b>? Adquira um Bilhete Mensal
+                            para ter créditos durante um período de 30 dias sem precisar se preocupar com tempo de integração
+                            entre transportes. A data de início da contagem de dias é a data da primeira utilização do Bilhete!
+                        </p>
+                    </div>
                 </div>
+                
+                <div class="containerLista">
+                    <h4 class="fraseLista">Opção desejada:</h4>
+                    <select id="bilhetes" name="bilhetes" class="listaOpcoes">
+                      <option value="selecione" selected>Selecione</option>
+                      <option value="unico"> Bilhete Único</option>
+                      <option value="duplo">Bilhete Duplo</option>
+                      <option value="semanal">Bilhete Semanal</option>
+                      <option value="mensal">Bilhete Mensal</option>
+                    </select>
+                  </div>
+                
             </div>
-            
-            
-
-            <h1 class="title-2"> Este é o seu Bilhete: </h1><br>
-            <span id="imgB"></span>
-
         </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-2 d-flex">
-                <!--<img class="imgSeuBilhete" src="img/Semanal.png" alt="">-->
-                <div class="button">
-                    <!--<input type = "submit" value = "Confirmar Compra" class="consultar">-->
-                </div>
-            </div>
+        
+        
+        <button class="consultar" id="id-consultar" onclick="gerar()">Gerar Bilhete</button>  
+        <div class="mostrarID" onclick="gerar()">
+            <p class="fraseID" id="frase"></p>
+            <p class="seuID" id="resp"></p>
         </div>
-    </div>
-
-    <button class="consultar" onclick="gerar()">Gerar Bilhete</button>
+        
+        
+    </body>
     
-    <h1 class="fraseID">O ID do seu Bilhete é:</h1>
-    
-    <div class="seuID" id="resp"></div>
-
-    <script type="text/javascript" src="js/gerarBilhete.js"></script>
-</body>
-
 <iframe class="footer" src="components/footer.html" frameborder="0"></iframe>
-
+    
+<script src="js/gerarBilhete.js"></script>
 </html>
