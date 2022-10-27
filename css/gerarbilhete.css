@@ -79,19 +79,18 @@
 }
 
 .containerLista {
-    margin-left: 300px;
-    
+    margin-left: 40%;
 }
 
 .fraseLista {
-    font-size: 20px;
+    font-size: 25px;
     margin: 15px;
 }
 
 .listaOpcoes {
-    font-size: 25px;
-    border-radius: 10px;
-    padding: 10px;
+    font-size: 20px;
+    border-radius: 15px;
+    padding: 20px;
 }
 
 .consultar {
@@ -103,20 +102,15 @@
     border: none;
     margin-bottom: 50px;
     transition: 0.5s;
-    margin-left: 300px;
+    margin-left: 35.5%;
     margin-right: 30px;
-    margin-top: 140px;
-    
+    margin-top: 20px;    
 }
 
 .consultar:hover {
     transform: scale(1.1);
     cursor: pointer;
     
-}
-
-.slc-ticket{
-    margin-left: 30px;
 }
 
 .seuID {
