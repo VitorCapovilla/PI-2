@@ -14,18 +14,22 @@
 <body>
     <div class="inicio">
         <h1 class="title"> Consulte seu Saldo e Histórico de Uso</h1>
-        <img class="imgInicio" src="img/imgHistorico.png"> 
+       <img class="imgInicio" src="img/imgHistorico.png">
         <p class="content"> Com o ID do seu Bilhete, você pode consultar seu saldo atual e o histórico de uso,
                             com data e hora da geração, das recargas e de todas as suas viagens!
         </p>
     </div>
 
-    <form class="solicitaId"> 
-        <label for="idBilhete"><b> ID do Bilhete: </b></label>
-        <input type="text" id="idBilhete" class="input-id" required placeholder="XXX . XXX . XXX - XX">
-    </form>
 
-    <input type = "submit" value = "Consultar Histórico" class="consultar">
+    <div class="containerID">
+        <form class="solicitaId"> 
+            <label for="idBilhete"><b> ID do Bilhete: </b></label>
+            <input type="text" id="idBilhete" class="input-id" required placeholder="XXX . XXX . XXX - XX">
+        </form>
+
+        <input type = "submit" value = "Consultar Histórico" class="consultar">
+    </div>
+       
 
     <h3> Dados Geração do Bilhete: </h3>
     <table class="tableGeracao">

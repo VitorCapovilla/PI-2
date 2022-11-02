@@ -11,6 +11,7 @@
 
 <iframe class="navbar" src="components/navbar.html" frameborder="0"></iframe>
 
+
 <body>
     <div class="inicio">
         <h1 class="title"> Recarregue aqui seu Bilhete!</h1>
@@ -26,6 +27,19 @@
             <label for="idBilhete"><b> ID do Bilhete: </b></label>
             <input type="text" id="idBilhete" class="input-id" required placeholder="XXX . XXX . XXX - XX">
 
+            <button class="botaoAjuda" id="botaoAjuda">Não sabe onde encontrar o ID no seu Bilhete? Clique aqui.</button>
+
+
+            <div id="containerAjuda" class="ajuda">
+
+                <div class="conteudoAjuda">
+                    <span class="fechar">&times;</span>
+                    <p>O ID fica localizado na parte forntal da imagem logo abaixo da identificação do tipo do seu Bilhete.</p>
+                    <img class="imgMostrarId" src="img/mostrarId.png">
+            </div>
+
+            </div>
+
             <fieldset>
                 <legend><b> Escolha o tipo da recarga </b></legend>
                 <label for="unico"> <input type="radio" name="tipoBilhete"  value="unico" id="unico" checked> Único </label>
@@ -39,13 +53,12 @@
     </div>
 
 
-    <div class="ajuda">
-        <h3> Não sabe onde encontrar o ID no seu Bilhete?</h3>
-        <p> O ID fica localizado na parte forntal da imagem logo abaixo da identificação do tipo do seu Bilhete.</p>
-        <img class="imgMostrarId" src="img/mostrarId.png">
-    </div>
+
 </body>
 
+
 <iframe class="footer" src="components/footer.html" frameborder="0"></iframe>
+
+<script src="js/recarregaBilhete.js"></script>
 
 </html>
