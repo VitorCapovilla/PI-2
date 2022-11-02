@@ -4,7 +4,6 @@
     padding: 0;
     text-decoration: none;
     font-family: cairo;
-    overflow: hidden;
 }
 
 .menu{
@@ -85,7 +84,6 @@ header{
         width: 100vw;
         background: #292c2f;
         transition: .3s;
-        overflow: hidden;
     }
 
     .navbar .list-nav{
