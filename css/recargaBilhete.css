@@ -131,3 +131,30 @@
     text-decoration: none;
     cursor: pointer;
   }
+
+  .precoBilhete {
+    margin: 15px;
+    font-size: 25px;
+    background-color: rgb(255, 235, 208);
+    text-align: center;
+  }
+
+  .fraseBilhete {
+    margin: 15px;
+    font-size: 17px;
+
+  }
+
+
+
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

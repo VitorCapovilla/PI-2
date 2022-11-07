@@ -23,6 +23,3 @@ document.getElementById("bilhetes").addEventListener("change", function(event){
     document.getElementById("id-consultar").disabled = false; //Habilitado
   }
 });
-
-
-

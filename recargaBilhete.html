@@ -50,7 +50,7 @@
         <form class="solicitaId">
             
             <label for="idBilhete"><b> ID do Bilhete: </b></label>
-            <input type="text" id="idBilhete" class="input-id" required placeholder="XXX . XXX . XXX - XX">
+            <input type="number" id="idBilhete" class="input-id" required placeholder="XXX . XXX . XXX - XX">
 
             <button class="botaoAjuda" id="botaoAjuda">Não sabe onde encontrar o ID no seu Bilhete? Clique aqui.</button>
 
@@ -61,7 +61,7 @@
                     <span class="fechar">&times;</span>
                     <p>O ID fica localizado na parte forntal da imagem logo abaixo da identificação do tipo do seu Bilhete.</p>
                     <img class="imgMostrarId" src="img/mostrarId.png">
-            </div>
+                </div>
 
             </div>
 
@@ -72,8 +72,11 @@
                 <label for="semanal"> <input type="radio" name="tipoBilhete"  value="semanal" id="semanal"> Semanal </label>
                 <label for="mensal"> <input type="radio" name="tipoBilhete"  value="mensal" id="mensal"> Mensal </label>
             </fieldset>
+            
+            <p class="precoBilhete" id="preco"></p>
+            <p class="fraseBilhete" id="frase"></p>
 
-            <input type = "submit" value = "Confirmar Recarga" class="confirmar">
+            <button class="confirmar" onclick="confirma()">Confirmar</button>
         </form>
     </div>
 
