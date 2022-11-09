@@ -132,29 +132,51 @@
     cursor: pointer;
   }
 
-  .precoBilhete {
+  .preco {
     margin: 15px;
     font-size: 25px;
     background-color: rgb(255, 235, 208);
     text-align: center;
   }
 
-  .fraseBilhete {
+  .explicacao {
     margin: 15px;
     font-size: 17px;
 
   }
 
+.verificaId {
+  display: block;
+  font-size: 15px;
+  background-color:#ede7e4;
+  color:#2c2f2f;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 50px;
+  transition: 1s;
+}
+
+
+.hide {
+  display: none;
+}
 
 
 
 
+
+
+
+/*Retirar scrol do input ID*/
+    /*Chrome*/
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-/* Firefox */
+    /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
 }

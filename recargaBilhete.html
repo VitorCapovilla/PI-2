@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/recargaBilhete.css">
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" href="img/guia.png">
 
 </head>
 
@@ -65,18 +66,21 @@
 
             </div>
 
-            <fieldset>
-                <legend><b> Escolha o tipo da recarga </b></legend>
-                <label for="unico"> <input type="radio" name="tipoBilhete"  value="unico" id="unico" checked> Único </label>
-                <label for="duplo"> <input type="radio" name="tipoBilhete"  value="duplo" id="duplo"> Duplo </label>
-                <label for="semanal"> <input type="radio" name="tipoBilhete"  value="semanal" id="semanal"> Semanal </label>
-                <label for="mensal"> <input type="radio" name="tipoBilhete"  value="mensal" id="mensal"> Mensal </label>
-            </fieldset>
-            
-            <p class="precoBilhete" id="preco"></p>
-            <p class="fraseBilhete" id="frase"></p>
+            <button class="verificaId" id="verificaId" disabled >Verificar ID</button>
 
-            <button class="confirmar" onclick="confirma()">Confirmar</button>
+            <div id="formulario" class="hide">
+                <fieldset>
+                    <legend><b> Escolha o tipo da recarga </b></legend>
+                    <div id="group">
+                        <!-- Lista em JS -->
+                    </div>
+                </fieldset>
+
+                <p id="preco" class="preco"></p>
+                <p id="explicacao" class="explicacao"></p>
+
+                <button class="confirmar" onclick="confirma()">Confirmar</button>
+            </div>
         </form>
     </div>
 

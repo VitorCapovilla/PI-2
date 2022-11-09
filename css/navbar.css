@@ -20,12 +20,17 @@ header{
 }
 
 .logo{
-    width: 120%;
+    width: 2000px;
+}
+
+.logoHome {
+    width: 164px;
 }
 
 .nav-item{
     list-style-type: none;
     text-align: center;
+    margin-right: 21px;
 }
 
 .navbar .list-nav{
@@ -43,6 +48,33 @@ header{
 }
 
 .navbar .list-nav .nav-item .item-text:hover{
+    font-size: 18px;
+    color: #b1dbd6;
+}
+
+
+/* HOME */
+.nav-itemHome{
+    list-style-type: none;
+    text-align: center;
+}
+
+.navbarHome .list-navHome{
+    display: flex;
+    align-items: center;
+    margin-left: 545px;
+}
+
+.navbarHome .list-navHome .nav-itemHome .item-textHome{
+    display: block;
+    color: white;
+    font-size: 16.5px;
+    padding: 8px 20px;
+    transition: .2s;
+    margin: 0px 5px;
+}
+
+.navbarHome .list-navHome .nav-itemHome .item-textHome:hover{
     font-size: 18px;
     color: #b1dbd6;
 }
