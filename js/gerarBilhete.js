@@ -1,7 +1,21 @@
 function gerar()
 {
   document.getElementById('frase').innerHTML = 'O ID do seu Bilhete é: ';
-  let id = document.getElementById('resp').innerHTML = 10 * (Math.random()) + 1;
+
+  var http = XMLHttpRequest()
+  http.open("GET", "http://localhost.com:3000/generate")
+
+  http.onreadystatechange = function(){
+    if (http.readyState == 4){
+      if (http.status == 201){
+        let resposta = JSON.parse(http.response)
+        document.getElementById('resp').innerHTML = resposta["NUMERO_BILHETE"]
+
+      }else{
+        //mostrar mensagem de erro
+      }
+    }
+  }
   
   //desabilitar botao após primeiro click
   document.getElementById("id-consultar").disabled = true;
@@ -23,3 +37,4 @@ document.getElementById("bilhetes").addEventListener("change", function(event){
     document.getElementById("id-consultar").disabled = false; //Habilitado
   }
 });
+
