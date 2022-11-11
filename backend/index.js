@@ -6,6 +6,7 @@ const app = express()
 const httpServer = http.createServer(app)
 
 app.post('/generate', async (req, res) => {
+    console.log('entrou no post')
     const saveTicketSql = `INSERT INTO BILHETES (ID, NUMERO_BILHETE) values (SQ_BILHETES.nextval, :0)`
     const getTicketSql = `SELECT NUMERO_BILHETE, DATA_CRIACAO FROM BILHETES WHERE NUMERO_BILHETE = :0`
 
@@ -26,7 +27,7 @@ app.post('/generate', async (req, res) => {
     }
 })
 
-httpServer.listen(3000, () => {
+httpServer.listen(3001, () => {
     console.log("Aplicação rodando")
 });
 
