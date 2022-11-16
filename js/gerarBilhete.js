@@ -22,7 +22,7 @@ function gerar() {
         
           alert("Bilhete gerado com sucesso! Clique em 'OK' para verifficar seu ID. ");
         } else {
-          //mostrar mensagem de erro
+          console.log('Erro')
         }
       }
     }
