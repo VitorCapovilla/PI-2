@@ -5,6 +5,14 @@ import { nanoid } from "nanoid"
 const app = express()
 const httpServer = http.createServer(app)
 
+app.use(function(req,res,next){
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    res.setHeader('Access-Control-Allow-Credentials', true);
+    next()
+});
+
 app.post('/generate', async (req, res) => {
     console.log('entrou no post')
     const saveTicketSql = `INSERT INTO BILHETES (ID, NUMERO_BILHETE) values (SQ_BILHETES.nextval, :0)`
@@ -20,12 +28,12 @@ app.post('/generate', async (req, res) => {
                 console.log(err)
             })
         const resultSelect = (await simpleExecute(getTicketSql, [number]))["rows"][0]
-        res.status(201).send(resultSelect)
+        res.status(201).send(JSON.stringify(resultSelect))
     } catch (err) {
         console.log(err)
         res.status(500).send("Erro interno")
     }
-})
+});
 
 httpServer.listen(3001, () => {
     console.log("Aplicação rodando")

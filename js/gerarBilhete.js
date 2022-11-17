@@ -1,33 +1,27 @@
 function gerar() {
-        
+  console.log('entrou aqui')
   //desabilitar botao após primeiro click
   document.getElementById("id-consultar").disabled = true;
-  document.getElementById('frase').innerHTML = 'O ID do seu Bilhete é: '
 
-  setTimeout(function() {
-    var http = new XMLHttpRequest()
-    http.open("POST", "http://localhost.com:3001/generate")
-  
-    http.onreadystatechange = function () {
-      console.log('entrou nesta bosta')
-      if (http.readyState == 4) {
-  
-        console.log('4');
-        console.log(http);
-        console.log(http.status);
-        if (http.status == 201) {
-          let resposta = JSON.parse(http.response)
-          console.log(resposta);
-          document.getElementById('resp').innerHTML = resposta["NUMERO_BILHETE"]
-        
-          alert("Bilhete gerado com sucesso! Clique em 'OK' para verifficar seu ID. ");
-        } else {
-          console.log('Erro')
-        }
-      }
+  var xhttp = new XMLHttpRequest()
+  xhttp.open("POST", "http://localhost:3001/generate");
+  xhttp.onreadystatechange = function () {
+    console.log('entrou nesta bosta');
+    console.log(xhttp);
+    console.log(xhttp.status);
+    if (xhttp.readyState == 4 && xhttp.status == 201) {
+      console.log(xhttp.response)
+      let resposta = JSON.parse(xhttp.response)
+      console.log(resposta);
+      document.getElementById('frase').innerHTML = 'O ID do seu Bilhete é: '
+      document.getElementById('resp').innerHTML = resposta["NUMERO_BILHETE"]
+    
+      alert("Bilhete gerado com sucesso! Clique em 'OK' para verifficar seu ID. ");
+    } else {
+      console.log('Erro')
     }
-    http.send()
-  }, 1000);
+  }
+  xhttp.send()
 }
 
 document.getElementById("id-consultar").disabled = true; //Desabilitado
