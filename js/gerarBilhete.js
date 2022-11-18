@@ -4,7 +4,7 @@ function gerar() {
   document.getElementById("id-consultar").disabled = true;
 
   var xhttp = new XMLHttpRequest()
-  xhttp.open("POST", "http://localhost:3001/generate");
+  xhttp.open("POST", "http://localhost:3002/generate");
   xhttp.onreadystatechange = function () {
     console.log('entrou');
     console.log(xhttp);

@@ -35,7 +35,7 @@ app.post('/generate', async (req, res) => {
     }
 });
 
-httpServer.listen(3001, () => {
+httpServer.listen(3002, () => {
     console.log("Aplicação rodando")
 });
 
