@@ -6,7 +6,7 @@ function gerar() {
   var xhttp = new XMLHttpRequest()
   xhttp.open("POST", "http://localhost:3001/generate");
   xhttp.onreadystatechange = function () {
-    console.log('entrou nesta bosta');
+    console.log('entrou');
     console.log(xhttp);
     console.log(xhttp.status);
     if (xhttp.readyState == 4 && xhttp.status == 201) {

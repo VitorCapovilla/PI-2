@@ -108,15 +108,3 @@ table {
     padding: 15px;
     background-color: #DBE9F4;
 }
-
-/*Retirrar scrol do input ID*/
-    /*Chrome*/
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-    /* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
-}
