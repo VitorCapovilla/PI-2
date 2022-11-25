@@ -29,9 +29,33 @@ window.onclick = function(event) {
  function confirma() {
    var id = document.getElementById("idBilhete").value;
 
-   if(id!=null) 
-     alert("Recarga efetuada com sucesso!");
+   let lerID =  document.getElementById("idBilhete");
 
+  if(id!=null)
+  { 
+  alert("Recarga efetuada com sucesso!");
+
+   if (this.value == 'Bilhete Único') {
+
+    axios.post("http.localhost:3002/recarga", {number:lerID, tipo:"1"}).then((res) => 
+    {console.log("Resposta recarga", res)})
+
+    }
+    
+    else if (this.value == 'Bilhete Duplo') {
+      
+    }
+    
+    else if (this.value == 'Bilhete Semanal') {
+      
+  }
+  
+  else if (this.value == 'Bilhete Mensal') {
+    
+  }
+}
+  if(id!=null) 
+    alert("Recarga efetuada com sucesso!");
 }
 
 

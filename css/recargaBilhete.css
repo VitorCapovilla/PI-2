@@ -163,26 +163,3 @@
 .hide {
   display: none;
 }
-
-.mostraSaldo {
-  margin-top: 60px;
-  margin-bottom: 30px;
-  padding-left: 35%;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background-color: rgb(241, 237, 237);
-  border-radius: 5px;
-  
-}
-
-.saldo {
-  font-size: 20px;
-  font-weight: bold;
-  display: inline;
-}
-
-.valorSaldo {
-  font-size: 18px;
-  display: inline;
-  padding-left: 15px;
-}

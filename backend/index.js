@@ -23,6 +23,29 @@ app.post('/generate', async (req, res) => {
         await simpleExecute(saveTicketSql, [number], {autoCommit: true})
             .then((result) => {
                 console.log(JSON.stringify(result))
+                console.log("resultado number ", number)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+        const resultSelect = (await simpleExecute(getTicketSql, [number]))["rows"][0]
+        res.status(201).send(JSON.stringify(resultSelect))
+    } catch (err) {
+        console.log(err)
+        res.status(500).send("Erro interno")
+    }
+});
+
+app.post('/recarga', async (req, res) => {
+    console.log('entrou no post recarga')
+    const saveTicketSql = `INSERT INTO RECARGAS (ID_BILHETE, ID_TIPO) values (ID_BILHETE, :0)`
+    const getTicketSql = `SELECT NUMERO_BILHETE, DATA_CRIACAO FROM BILHETES WHERE NUMERO_BILHETE = :0`
+
+    try {
+        const number = nanoid(9)
+        await simpleExecute(saveTicketSql, [number], {autoCommit: true})
+            .then((result) => {
+                console.log(JSON.stringify(result))
             })
             .catch((err) => {
                 console.log(err)

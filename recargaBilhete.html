@@ -69,14 +69,11 @@
             <button class="verificaId" id="verificaId" disabled >Verificar ID</button>
 
             <div id="formulario" class="hide">
-                <div class="mostraSaldo">
-                    <p class="saldo">Saldo Atual: </p>
-                    <p class='valorSaldo' id="valorSaldo"> </p>
-                </div>
                 <fieldset>
                     <legend><b> Escolha o tipo da recarga </b></legend>
                     <div id="group">
                         <!-- Lista em JS -->
+                        <button id="botao-unico" onclick="unico()"> Unico </button>
                     </div>
                 </fieldset>
 
@@ -108,5 +105,6 @@
 </footer>
 
 <script src="js/recarregaBilhete.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </html>
