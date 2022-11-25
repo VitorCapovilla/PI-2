@@ -36,27 +36,78 @@ app.post('/generate', async (req, res) => {
     }
 });
 
-app.post('/recarga', async (req, res) => {
-    console.log('entrou no post recarga')
-    const saveTicketSql = `INSERT INTO RECARGAS (ID_BILHETE, ID_TIPO) values (ID_BILHETE, :0)`
-    const getTicketSql = `SELECT NUMERO_BILHETE, DATA_CRIACAO FROM BILHETES WHERE NUMERO_BILHETE = :0`
+
+function Recargas(bd) 
+{
+    this.bd = bd;
+
+    this.incluaRE = async function (recarga) { console.log("incluaRE recarga:", recarga)
+        try {
+            const conexao = await this.bd.getConexao();
+
+            const insercao = "INSERT INTO RECARGAS (ID_BILHETE, ID_TIPO) VALUES (:0, :tipo)";
+
+            const dados = [recarga.number, recarga.tipo];
+
+            await conexao.execute(insercao, dados);
+
+            const commit = "COMMIT";
+            await conexao.execute(commit);
+
+        }
+        catch (erro) {
+            console.log("erro");
+        }
+    }
+}
+function Recarga(number, tipo, data) {
+    this.number = number;
+    this.tipo = tipo;
+    this.data = data;
+}
+
+function Comunicado(number, tipo, mensagem) {
+    this.number = number;
+    this.tipo = tipo;
+    this.mensagem = mensagem;
+}
+
+async function inclusaoRE(req, res) {
+    console.log("inclusãoRE:", req.body)
+    const recarga = new Recarga(req.body.number, req.body.tipo);
 
     try {
-        const number = nanoid(9)
-        await simpleExecute(saveTicketSql, [number], {autoCommit: true})
-            .then((result) => {
-                console.log(JSON.stringify(result))
-            })
-            .catch((err) => {
-                console.log(err)
-            })
-        const resultSelect = (await simpleExecute(getTicketSql, [number]))["rows"][0]
-        res.status(201).send(JSON.stringify(resultSelect))
-    } catch (err) {
-        console.log(err)
-        res.status(500).send("Erro interno")
+        const mensg = await global.recargas.incluaRE(recarga);
+
+        const sucesso = new Comunicado(
+            'Recarga gerada com sucesso',
+
+        );
+
+        console.log(mensg);
+        return res.status(201).json(sucesso);
     }
-});
+    catch (erro) {
+        console.log(erro);
+        const erro2 = new Comunicado(
+            ',l,,'
+        );
+
+        return res.status(409).json(erro2);
+    }
+}
+
+
+app.post('/recarga', inclusaoRE);
+
+
+
+
+
+
+
+
+
 
 httpServer.listen(3002, () => {
     console.log("Aplicação rodando")
@@ -91,3 +142,4 @@ async function simpleExecute(statement, binds = [], options = {}) {
         }
     }
 }
+

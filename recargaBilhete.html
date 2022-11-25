@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="icon" href="img/guia.png">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </head>
 
@@ -73,7 +74,7 @@
                     <legend><b> Escolha o tipo da recarga </b></legend>
                     <div id="group">
                         <!-- Lista em JS -->
-                        <button id="botao-unico" onclick="unico()"> Unico </button>
+                        <button onclick="unico()"> Unico </button>
                     </div>
                 </fieldset>
 
@@ -81,6 +82,7 @@
                 <p id="explicacao" class="explicacao"></p>
 
                 <button class="confirmar" onclick="confirma()">Confirmar</button>
+                <button id="botao-unico" onclick="unico()"> Unico </button>
             </div>
         </form>
     </div>
