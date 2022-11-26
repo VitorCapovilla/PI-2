@@ -1,3 +1,4 @@
+<<<<<<< HEAD:Front (1)/css (1)/recargaBilhete (1).css
 .title {
     margin: 5vh;
     font-size: 25px;
@@ -163,3 +164,170 @@
 .hide {
   display: none;
 }
+=======
+.title {
+    margin: 5vh;
+    font-size: 25px;
+    display: inline-block;
+}
+
+.content {
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 20px;
+    width: 50%;
+    text-align: justify;    
+
+}
+
+.imgRecarga {
+    width: 25%;
+    margin-top: 70px;
+    margin-right: 70px;
+    border-radius: 10px;
+    float: right;
+}
+
+.imgRecarga, .content {
+    display: inline-block;
+    
+}
+
+.solicitaId {
+    margin: 50px;
+    margin-right: 40%;
+    text-indent: 17px;
+}
+
+.input-id {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 25px;
+    border-width: 2px;
+    border-color: #71817f;
+    width: 25%;
+    font-size: 17px;
+    text-align: center;
+}
+
+.solicitaId label, .solicitaId legend {
+    display: block;
+    padding: 12px;
+    font-size: 17px;
+    
+}
+
+.confirmar {
+    width: 30%;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 50px;
+    margin-left: 400px;
+    border-radius: 15px;
+    background-color: #EDDBD5;
+    border: NONE;
+    transition: 1s all;
+}
+
+.botaoAjuda{
+    font-size: 15px;
+    background-color:#f5f1ef;
+    color:#2c2f2f;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 10px;
+    margin-left: 50px;
+    transition: 1s;
+}
+
+.botaoAjuda:hover{
+    transform: scale(1.1);
+    color: black;
+    background-color: #EDDBD5;
+}
+
+.confirmar:hover {
+    transform: scale(1.1);
+    cursor: pointer;    
+}
+
+.imgMostrarId {
+    width: 50%;
+    border-radius: 10px;  
+    margin-left: 25%;  
+    margin-top: 20px;
+}
+
+.ajuda {
+    display: none;
+    position: fixed; /* deixar no lugar */
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; /* rolar a pagina */
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); /*ofuscar o fundo*/
+  }
+  
+  .conteudoAjuda {
+    background-color: #f5f1ef;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; 
+    border-radius: 10px;
+  }
+
+ .conteudoAjuda p{
+     font-size: 20px;
+     text-align: center;
+ } 
+
+  .fechar {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .fechar:hover,
+  .fechar:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .preco {
+    margin: 15px;
+    font-size: 25px;
+    background-color: rgb(255, 235, 208);
+    text-align: center;
+    border-radius: 5px;
+  }
+
+  .explicacao {
+    margin: 15px;
+    font-size: 17px;
+
+  }
+
+.verificaId {
+  display: block;
+  font-size: 15px;
+  background-color:#ede7e4;
+  color:#2c2f2f;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 50px;
+  transition: 1s;
+}
+
+
+.hide {
+  display: none;
+}
+>>>>>>> 31f83fda7cab4097ab9e6c6eb234d580aa2815d9:css/recargaBilhete.css
