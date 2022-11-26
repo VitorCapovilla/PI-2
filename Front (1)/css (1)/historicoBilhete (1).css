@@ -1,0 +1,110 @@
+.title {
+    margin: 5vh;
+    font-size: 25px;
+}
+
+.imgInicio {
+    width: 20%;
+    margin-left: 5%;
+    margin-top: 100px;
+    float: left;
+    display: inline;
+}
+
+.content {
+    text-align: justify;
+    font-size: 20px;
+    width: 50%;
+    float: right;
+    margin-top: 20px;
+    padding-right: 10%;
+    line-height: 1.5;
+    margin-bottom: 70px;
+}
+
+.imgRecarga, .content {
+    display: inline-block;
+    
+}
+
+.solicitaId {
+    margin: 20px;
+    text-indent: 17px;
+    margin-left: 45%;
+    
+}
+
+.containerID{
+    margin-left: auto;
+    margin-right: auto;
+    display: inline;
+    margin-top: 50px;
+}
+
+.input-id {
+    margin: 5px;
+    margin-left: 150px;
+    padding: 10px;
+    border-radius: 25px;
+    border-color: #71817f;
+    width: 30%;
+    font-size: 17px;
+    text-align: center;
+}
+
+.solicitaId label {
+    margin-left: 195px;
+}
+
+.solicitaId label, .solicitaId legend {
+    display: block;
+    padding: 12px;
+    font-size: 17px;
+    
+}
+
+.consultar {
+    width: 25%;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: #EDDBD5;
+    border: none;
+    transition: 1s;
+    margin-left: 745px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.consultar:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+h3 {
+    margin: 20px;
+}
+
+table {
+    margin: 20px;
+    display: inline-block;
+}
+
+.tableGeracao tr {
+    padding: 10px;
+   
+}
+
+.tableGeracao td {
+    padding: 15px;
+    background-color: #DBE9F4;
+}
+
+.tableUso tr {
+    padding: 10px;
+}
+
+.tableUso td {
+    padding: 15px;
+    background-color: #DBE9F4;
+}

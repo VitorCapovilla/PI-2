@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF8">
+    <title> Recarga Bilhete BFAI </title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/recargaBilhete.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" href="img/guia.png">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<header>
+    <div class="logo"><img src="img/BFAI branco.png" alt="" width="20%"></div>
+    <div class="menu">
+        <div class="linha"></div>
+        <div class="linha"></div>
+        <div class="linha"></div>
+    </div>
+    <div class="navbar">
+        <ul class="list-nav">
+            <li class="nav-item">
+                <a class="item-text" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="item-text" href="gerarBilhete.html">Gerar Bilhetes</a>
+            </li>
+            <li class="nav-item">
+                <a class="item-text" href="recargaBilhete.html">Recarregar Bilhetes</a>
+            </li>
+            <li class="nav-item">
+                <a class="item-text" href="historicoBilhete.html">Histórico Bilhetes</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+
+<body>
+    <div class="inicio">
+        <h1 class="title"> Recarregue aqui seu Bilhete!</h1>
+        <img class="imgRecarga" src="img/Recarga.png">
+        <p class="content"> Aqui você pode recarregar seu Bilhete e escolher o tipo de recarga que melhor se adaptar às suas necessidas.
+            Não se preocupe em gerar outro Bilhete, você pode usar o seu mesmo com uma nova categoria de uso.
+        </p>
+    </div>
+
+    <div class="formulario">
+        <form class="solicitaId">
+            
+            <label for="number-code"><b> ID do Bilhete: </b></label>
+            <input type="text" maxlength="9" id="number-code" class="input-id" required placeholder="EX: nL9Yf4Cq9">
+
+            <button class="botaoAjuda" id="botaoAjuda">Não sabe onde encontrar o ID no seu Bilhete? Clique aqui.</button>
+
+
+            <div id="containerAjuda" class="ajuda">
+
+                <div class="conteudoAjuda">
+                    <span class="fechar">&times;</span>
+                    <p>O ID fica localizado na parte forntal da imagem logo abaixo da identificação do tipo do seu Bilhete.</p>
+                    <img class="imgMostrarId" src="img/mostrarId.png">
+                </div>
+
+            </div>
+
+            <button class="verificaId" id="verificaId" disabled >Verificar ID</button>
+
+            <div id="formulario" class="hide">
+                <fieldset>
+                    <legend><b> Entenda cada tipo da recarga </b></legend>
+                    <div id="group">
+                        <!-- Lista em JS -->
+                        <!--<button onclick="unico()"> Unico </button>-->
+                    </div>
+                </fieldset>
+
+                <p id="preco" class="preco"></p>
+                <p id="explicacao" class="explicacao"></p>
+
+                <input class="botao-recarga" id="botao-unico-recarga" type="button" value="unico">
+                <input class="botao-recarga" id="botao-duplo-recarga" type="button" value="duplo">
+                <input class="botao-recarga" id="botao-semanal-recarga" type="button" value="semanal">
+                <input class="botao-recarga" id="botao-mensal-recarga" type="button" value="mensal">
+
+                <!--<button class="confirmar" onclick="confirma()">Confirmar</button>-->
+
+                <!--<button id="botao-unico" onclick="unico()"> Unico </button>-->
+
+            </div>
+        </form>
+    </div>
+
+
+
+</body>
+
+
+<footer class="rodape">
+    <div class="container">
+        <p class="footer-links">
+            <a class="link-1" href="index.html">HOME</a>
+
+            <a href="gerarBilhete.html">NOVO BILHETE</a>
+
+            <a href="recargaBilhete.html">RECARREGAR</a>
+        </p>
+
+        <p class="coryright">Coryright Ⓒ Bilhete Urbano 2022 -  All Rights Reserved</p>
+    </div>
+</footer>
+
+<script src="js/recarregaBilhete.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</html>
