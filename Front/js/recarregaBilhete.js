@@ -83,7 +83,7 @@ btnVerifica.addEventListener("click", function() {
 });
 
 
-//aqui
+//salva recarga no bd
 const botao = document.querySelectorAll('.botao-recarga');
 const code = document.getElementById('number-code');
 console.log(botao);
