@@ -13,28 +13,31 @@ app.use(function(req,res,next){
     next()
 });
 
-app.post('/generate', async (req, res) => {
-    console.log('entrou no post')
-    const saveTicketSql = `INSERT INTO BILHETES (ID, NUMERO_BILHETE) values (SQ_BILHETES.nextval, :0)`
-    const getTicketSql = `SELECT NUMERO_BILHETE, DATA_CRIACAO FROM BILHETES WHERE NUMERO_BILHETE = :0`
+// app.post('/generate', async (req, res) => {
+//     console.log('entrou no post')
+//     const saveTicketSql = `INSERT INTO BILHETES (ID, NUMERO_BILHETE) values (SQ_BILHETES.nextval, :0)`
+//     const getTicketSql = `SELECT NUMERO_BILHETE, DATA_CRIACAO FROM BILHETES WHERE NUMERO_BILHETE = :0`
 
-    try {
-        const number = nanoid(9)
-        await simpleExecute(saveTicketSql, [number], {autoCommit: true})
-            .then((result) => {
-                console.log(JSON.stringify(result))
-                console.log("resultado number ", number)
-            })
-            .catch((err) => {
-                console.log(err)
-            })
-        const resultSelect = (await simpleExecute(getTicketSql, [number]))["rows"][0]
-        res.status(201).send(JSON.stringify(resultSelect))
-    } catch (err) {
-        console.log(err)
-        res.status(500).send("Erro interno")
-    }
-});
+//     try {
+//         const number = nanoid(9)
+//         await simpleExecute(saveTicketSql, [number], {autoCommit: true})
+//             .then((result) => {
+//                 console.log(JSON.stringify(result))
+//                 console.log("resultado number ", number)
+//             })
+//             .catch((err) => {
+//                 console.log(err)
+//             })
+//         const resultSelect = (await simpleExecute(getTicketSql, [number]))["rows"][0]
+//         res.status(201).send(JSON.stringify(resultSelect))
+//     } catch (err) {
+//         console.log(err)
+//         res.status(500).send("Erro interno")
+//     }
+// });
+
+
+app.post('/recarga', inclusaoRE);
 
 
 function Recargas(bd) 
@@ -98,18 +101,13 @@ async function inclusaoRE(req, res) {
 }
 
 
-app.post('/recarga', inclusaoRE);
 
 
 
 
 
 
-
-
-
-
-httpServer.listen(3002, () => {
+httpServer.listen(3000, () => {
     console.log("Aplicação rodando")
 });
 

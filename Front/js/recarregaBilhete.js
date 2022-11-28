@@ -117,7 +117,7 @@ botao.forEach(element => {
         let data = today;
 
         let objBilhete = { codigo: parseInt(codigo), tipo: tipo, data: data };
-        let url = `http://localhost:3000/recarga`
+        let url = `http://localhost:3000/recarga`;
 
         let res = axios.post(url, objBilhete)
             .then(response => {

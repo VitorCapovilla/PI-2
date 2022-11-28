@@ -28,11 +28,11 @@ function banco_de_dados() {
         try {
             const conexao = await this.getConexao();
 
-      
+
             const bdBilhetes = 'CREATE TABLE BILHETESS (NUMERO_BILHETE INTEGER NOT NULL PRIMARY KEY, DATA_CRIACAO varchar(100) NOT NULL)';
             const bdRecarga = 'CREATE TABLE RECARGAS (ID_RECARGA NUMBER NOT NULL PRIMARY KEY, NUMERO_BILHETE INTEGER NOT NULL, TIPO VARCHAR(50) NOT NULL,' +
                 'DATA_RECARGA VARCHAR2 (100) NOT NULL, CONSTRAINT FK_RECARGAS_BILHETESS FOREIGN KEY (NUMERO_BILHETE) REFERENCES BILHETESS(NUMERO_BILHETE))';
-            
+
             await conexao.execute(bdBilhetes);
             await conexao.execute(bdRecarga);
 
@@ -67,18 +67,15 @@ function Bilhetes(bd) {
     this.recarga = async function (bilhete) {
         try {
             const conexao = await this.bd.getConexao();
+            console.log(bilhete.codigo);
+            const insercao = "INSERT INTO RECARGAS (ID_RECARGA, NUMERO_BILHETE, TIPO) VALUES (ID_RECARGA_S.nextval,:0, :1)";
 
-            const insercao = "INSERT INTO RECARGAS (ID_RECARGA, NUMERO_BILHETE, TIPO, DATA_RECARGA) VALUES (ID_RECARGA_S.nextval,:0, :1, :2)";
+            const dados = [bilhete.codigo, bilhete.tipo];
 
-            const dados = [bilhete.codigo, bilhete.tipo, bilhete.data];
-
-            await conexao.execute(insercao, dados);
-
-            const commit = "COMMIT";
-            await conexao.execute(commit);
-
+            await conexao.execute(insercao, dados, { autoCommit: true });
         }
         catch (erro) {
+            console.log(erro)
             console.log("Erro ao tentar executar o insert na tabela recarga");
         }
     }
@@ -88,7 +85,7 @@ function Bilhetes(bd) {
 
         const sql = "SELECT NUMERO_BILHETE FROM BILHETESS WHERE NUMERO_BILHETE=:0";
         const dados = [codigo];
-        ret = await conexao.execute(sql, dados);
+        ret = await conexao.execute(sql, dados, { autoCommit: true });
 
         return ret;
     }
@@ -121,27 +118,21 @@ async function recarregar(req, res) {
     try {
         const bilhete = new Bilhete(req.body.codigo, req.body.tipo, req.body.data);
 
+        console.log(bilhete.codigo);
+
         ret = await global.bilhetes.selectUm(bilhete.codigo);
 
-        console.log(ret.rows[0]);
+        console.log(ret.rows);
 
-        if (ret.rows[0] != undefined) {
-            await global.bilhetes.recarga(bilhete);
-            const sucesso = new Comunicado(
-                'Número do bilhete: ' + bilhete.codigo,
-                'Tipo do Bilhete: ' + bilhete.tipo,
-                'O bilhete foi gerado com sucesso',
-                //mensg
-            );
-            return res.status(201).json(sucesso);
-        } else {
-            const erro2 = new Comunicado(
-                'LJE',
-                'Bilhete inexistente',
-                'Não há bilhete cadastrado'
-            );
-            return res.status(409).json(erro2);
-        }
+        await global.bilhetes.recarga(bilhete);
+        const sucesso = new Comunicado(
+            'Número do bilhete: ' + bilhete.codigo,
+            'Tipo do Bilhete: ' + bilhete.tipo,
+            'O bilhete foi gerado com sucesso',
+            //mensg
+        );
+        return res.status(201).json(sucesso);
+
     }
     catch (erro) {
         console.log(erro);
@@ -219,16 +210,14 @@ async function ativarServidor() {
         res.render(__dirname + "/gerarBilhete.html");
     });
 
-    app.get("/recarga", function (req, res) {
+    app.get("/recargaGet", function (req, res) {
         res.render(__dirname + "/recarga.html");
     });
 
 
-
-
     app.post('/gerarBilhete', inclusao);
 
-    app.post('/recargaBilhete', recarregar);
+    app.post('/recarga', recarregar);
 
     app.listen(3000, function () {
         console.log("Servidor rodando na porta 3000");
