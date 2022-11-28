@@ -1,0 +1,39 @@
+.fraseInicio{
+    font-size: 25px;
+    margin: 5vh;
+}
+
+.contentInicio {
+    margin-bottom: 30px;
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+article{
+    float:left; 
+    width:20%;
+  } 
+  img{
+    height:100%; 
+    width:100%
+  }
+
+body{
+    background-color: beige;
+    border-radius: 10px;
+    width: 20%;
+}
+
+.input-termo{
+    width: 450px;
+    padding: 10px;
+    background-color: #EDDBD5;
+    font-size: 20px;
+    border-radius: 15px;
+    border: none;
+    margin-bottom: 50px;
+    transition: 0.5s;
+    margin-left: 35.5%;
+    margin-right: 30px;
+    margin-top: 20px; 
+}
