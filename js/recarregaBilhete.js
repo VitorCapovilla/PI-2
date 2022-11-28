@@ -1,12 +1,12 @@
 //AJUDA
 
-var ajuda = document.getElementById("containerAjuda"); // Pegar ajuda/botão
+const ajuda = document.getElementById("containerAjuda"); // Pegar ajuda/botão
 
 
-var botao = document.getElementById("botaoAjuda"); // Pegar o botão para abrir
+const botao = document.getElementById("botaoAjuda"); // Pegar o botão para abrir
 
 
-var span = document.getElementsByClassName("fechar")[0]; // Visualizar o X
+const span = document.getElementsByClassName("fechar")[0]; // Visualizar o X
 
 // Abrir ajuda, quando clicar no botão
 botao.onclick = function() {

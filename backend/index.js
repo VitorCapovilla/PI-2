@@ -1,9 +1,11 @@
 import express from "express"
 import oracledb from "oracledb"
 import * as http from 'http'
+import cors from "cors"
 import { nanoid } from "nanoid"
 const app = express()
 const httpServer = http.createServer(app)
+app.use(cors())
 
 app.use(function(req,res,next){
     res.setHeader("Access-Control-Allow-Origin", "*");
@@ -15,23 +17,27 @@ app.use(function(req,res,next){
 
 app.post('/generate', async (req, res) => {
     console.log('entrou no post')
-    const saveTicketSql = `INSERT INTO BILHETES (ID, NUMERO_BILHETE) values (SQ_BILHETES.nextval, :0)`
-    const getTicketSql = `SELECT NUMERO_BILHETE, DATA_CRIACAO FROM BILHETES WHERE NUMERO_BILHETE = :0`
+    const saveTicketSql = `INSERT INTO BILHETESS (ID, NUMERO_BILHETE) values (SQ_BILHETES.nextval, :0)`
+    const getTicketSql = `SELECT NUMERO_BILHETE, DATA_CRIACAO FROM BILHETESS WHERE NUMERO_BILHETE = :0`
 
     try {
-        const number = nanoid(9)
+        const number = "ascd123"
+        // this.bd = bd;
+        // const conexao = await this.bd.getConexao();
         await simpleExecute(saveTicketSql, [number], {autoCommit: true})
             .then((result) => {
-                console.log(JSON.stringify(result))
+                // console.log(JSON.stringify(result))
                 console.log("resultado number ", number)
             })
             .catch((err) => {
-                console.log(err)
+                // console.log(err)
+                console.log('erro 1')
             })
         const resultSelect = (await simpleExecute(getTicketSql, [number]))["rows"][0]
         res.status(201).send(JSON.stringify(resultSelect))
     } catch (err) {
-        console.log(err)
+        // console.log(err)
+        console.log('erro 2')
         res.status(500).send("Erro interno")
     }
 });
@@ -40,6 +46,7 @@ app.post('/generate', async (req, res) => {
 function Recargas(bd) 
 {
     this.bd = bd;
+    console.log("rodando")
 
     this.incluaRE = async function (recarga) { console.log("incluaRE recarga:", recarga)
         try {
@@ -60,6 +67,7 @@ function Recargas(bd)
         }
     }
 }
+
 function Recarga(number, tipo, data) {
     this.number = number;
     this.tipo = tipo;
@@ -103,13 +111,7 @@ app.post('/recarga', inclusaoRE);
 
 
 
-
-
-
-
-
-
-httpServer.listen(3002, () => {
+httpServer.listen(3000, () => {
     console.log("Aplicação rodando")
 });
 
@@ -127,6 +129,7 @@ async function simpleExecute(statement, binds = [], options = {}) {
 
     try {
         connection = await oracledb.getConnection(connectionParams);
+        console.log('aquiiiiii')
         result = await connection.execute(statement, binds, options);
         return (result);
     } catch (err) {
