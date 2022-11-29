@@ -100,7 +100,8 @@
     transition: 0.5s;
     margin-left: 35.5%;
     margin-right: 30px;
-    margin-top: 20px;    
+    margin-top: 20px;
+    display: block;    
 }
 
 .consultar:hover {
@@ -123,9 +124,11 @@
     margin-top: 20px;
     font-size: 25px;
     display: inline-block;
+    margin-bottom: 30px;
 }
 
 .mostrarID {
     text-align: center;
     display: inline;
+    margin-left: 36%;
 }

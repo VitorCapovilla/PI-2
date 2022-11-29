@@ -39,20 +39,25 @@
 
 <body>
     <div class="inicio">
-        <h1 class="title"> Consulte seu Saldo e Histórico de Uso</h1>
+        <h1 class="title"> Utilização do Bilhete e Relatório de Gerenciamento </h1>
        <img class="imgInicio" src="img/imgHistorico.png">
-        <p class="content"> Com o ID do seu Bilhete, você pode consultar seu saldo atual e o histórico de uso,
-                            com data e hora da geração, das recargas e de todas as suas viagens!
+        <p class="content"> Com o ID do seu Bilhete, você pode consultar o histórico de uso,
+            com data e hora da geração, das recargas e de todas as suas viagens!
+            Após inserir o ID do Bilhete no campo indicado e confirmar, irá liberar o acesso ao 
+            transporte público.
         </p>
     </div>
 
 
     <div class="containerID">
         <form class="solicitaId"> 
-            <label for="idBilhete"><b> ID do Bilhete: </b></label>
-            <input type="text" maxlength="9" inputmode="numeric" id="idBilhete" class="input-id" required placeholder="EX: nL9Yf4Cq9">
+            <label for="number-code"><b> ID do Bilhete: </b></label>
+            <input type="text" maxlength="13" id="number-code" class="input-id" required placeholder="EX: nL9Yf4Cq9">
         </form>
+    </div>
 
+    <div class="botoes">
+        <input type = "submit" value = "Utilizar Bilhete" class="consultar">
         <input type = "submit" value = "Consultar Histórico" class="consultar">
     </div>
        
@@ -62,7 +67,6 @@
         <thead>
             <tr>
                 <td> Número do Bilhete </td>
-                <td> Categoria </td>
                 <td> Saldo Disponível </td>
                 <td> Data / Hora de Geração </td>
             </tr>
@@ -71,7 +75,6 @@
         <tbody>
             <tr>
                 <td> XXX . XXX . XXX - XX </td>
-                <td> Único </td>
                 <td> R$ xx,xx</td>
                 <td> dd/mm/aa hh:min:seg </td>
             </tr>
@@ -83,7 +86,6 @@
         <thead>
             <tr>
                 <td> Número do Bilhete </td>
-                <td> Categoria </td>
                 <td> Data / Hora de Uso </td>
             </tr>
         </thead>
@@ -91,7 +93,6 @@
         <tbody>
             <tr>
                 <td> XXX . XXX . XXX - XX </td>
-                <td> Único </td>
                 <td> dd/mm/aa hh:min:seg </td>
             </tr>
         </tbody>

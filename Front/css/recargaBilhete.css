@@ -141,14 +141,21 @@
   border-radius: 10px;
   margin-top: 10px;
   margin-left: 50px;
+  margin-bottom: 35px;
   transition: 1s;
+}
+
+.title-recarga {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 50px;
 }
 
 .botao-recarga {
   width: 20%;
   font-size: 20px;
   padding: 10px;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-left: 20px;
   border-radius: 15px;
   background-color: #EDDBD5;
