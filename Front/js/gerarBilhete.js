@@ -8,6 +8,7 @@ function gerar() {
 
   document.getElementById('frase').innerHTML = 'O ID do seu Bilhete é: '
   document.getElementById('resp').innerHTML = codigo;
+  document.getElementById('link-recarga').innerHTML = 'Recarregue seu Bilhete Aqui';
 
   alert("Bilhete gerado com sucesso! Clique em 'OK' para verifficar seu ID. ");
 } 
