@@ -75,8 +75,9 @@ function gerar() {
     
     let data = today;
 
-    let objBilhete = {data: data };
-    let url = `http://localhost:3001/utilizacao`
+    let codigo = localStorage.getItem("number-code");
+    let objBilhete = {codigo: parseInt(codigo)};
+    let url = `http://localhost:3000/utilizacao`
 
 
     let res = axios.post(url, objBilhete)
@@ -85,7 +86,6 @@ function gerar() {
             if (response.data) {
                 const msg = new Comunicado(
                     response.data.codigo,
-                    response.data.tipo,
                     response.data.data
                 );
 
@@ -97,7 +97,6 @@ function gerar() {
             if (error.response) {
                 const msg = new Comunicado(
                     error.response.data.codigo,
-                    error.response.data.tipo,
                     error.response.data.data
                 );
 
@@ -105,15 +104,13 @@ function gerar() {
             }
         })
 
-    function Comunicado(codigo, tipo, data) {
+    function Comunicado(codigo, data) {
         this.codigo = codigo;
-        this.tipo = tipo;
         this.data = data;
 
         this.get = function () {
             return (
                 this.codigo + " \n " +
-                this.tipo + " \n " +
                 this.data
             );
         }

@@ -196,11 +196,13 @@ async function utilizar(req, res) {
 
     try {
         const mensg = await global.bilhetes.utilizacao(bilhete);
+        console.log("acionando utilização");
 
         const sucesso = new Comunicado(
             'Bilhete ativado com sucesso',
 
         );
+        
 
         console.log(mensg);
         return res.status(201).json(sucesso);

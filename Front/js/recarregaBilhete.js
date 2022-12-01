@@ -100,15 +100,14 @@ botao.forEach(element => {
         else {                                   localStorage.setItem("tipo", "Bilhete Mensal");
         }
 
-        var today = new Date();
-        var dd = String(today.getDate()).padStart(2, '0');
-        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-        var yyyy = String(today.getFullYear());
-        var hours = String(today.getHours()).padStart(2, '0');
-        var minutes = String(today.getMinutes()).padStart(2, '0');
-        var seconds = String(today.getSeconds()).padStart(2, '0');
-
-        today = dd + '/' + mm + '/' + yyyy + ' - ' + hours + ':' + minutes + ':' + seconds;
+        var today = new Intl.DateTimeFormat('pt-BR', {
+          day: "numeric",
+          month: "numeric",
+          year: "numeric",
+          hour: "numeric",
+          minute: "numeric",
+          second: "numeric"
+      }).format(today);
 
         localStorage.setItem("data", today);
 
