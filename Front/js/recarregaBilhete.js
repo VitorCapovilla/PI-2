@@ -101,15 +101,14 @@ botao.forEach(element => {
         }
 
         var today = new Date();
-        var today = new Intl.DateTimeFormat('pt-BR', {
-          day: "numeric",
-          month: "numeric",
-          year: "numeric",
-          hour: "numeric",
-          minute: "numeric",
-          second: "numeric"
-      }).format(today);
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yyyy = String(today.getFullYear());
+        var hours = String(today.getHours()).padStart(2, '0');
+        var minutes = String(today.getMinutes()).padStart(2, '0');
+        var seconds = String(today.getSeconds()).padStart(2, '0');
 
+        today = dd + '/' + mm + '/' + yyyy + ' - ' + hours + ':' + minutes + ':' + seconds;
 
         localStorage.setItem("data", today);
 
@@ -162,13 +161,3 @@ botao.forEach(element => {
 
 
 });
-
-/*
-function unico() {
-let condigounico = document.getElementById('botao-unico').value
-console.log('respostarecargaBilhete', condigounico)
-
-axios.post("http://localhost:3000/recargaBilhete", {codigo: condigounico,tipo:"unico"}).then(( res) => {console.log("resposta do res do relatorio: ", res)})
-
-}
-*/
