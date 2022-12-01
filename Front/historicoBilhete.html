@@ -57,7 +57,7 @@
     </div>
 
     <div class="botoes">
-        <input type = "submit" value = "Utilizar Bilhete" class="consultar">
+        <input type = "submit" value = "Utilizar Bilhete" class="consultar" id="utilizar" onclick="utilizar()">
         <input type = "submit" value = "Consultar Histórico" class="consultar">
     </div>
        
@@ -67,16 +67,14 @@
         <thead>
             <tr>
                 <td> Número do Bilhete </td>
-                <td> Saldo Disponível </td>
                 <td> Data / Hora de Geração </td>
             </tr>
         </thead>
 
         <tbody>
             <tr>
-                <td> XXX . XXX . XXX - XX </td>
-                <td> R$ xx,xx</td>
-                <td> dd/mm/aa hh:min:seg </td>
+                <td id="idBilhete"> XXX . XXX . XXX - XX </td>
+                <td id="dataGeracao"> dd/mm/aa hh:min:seg </td>
             </tr>
         </tbody>
     </table>
@@ -92,8 +90,8 @@
 
         <tbody>
             <tr>
-                <td> XXX . XXX . XXX - XX </td>
-                <td> dd/mm/aa hh:min:seg </td>
+                <td id="idBilhete"> XXX . XXX . XXX - XX </td>
+                <td id="dataUtilizacao"> dd/mm/aa hh:min:seg </td>
             </tr>
         </tbody>
     </table>
@@ -104,17 +102,15 @@
             <tr>
                 <td> Número do Bilhete </td>
                 <td> Categoria da Recarga </td>
-                <td> Valor da Recarga </td>
                 <td> Data / Hora da Recarga </td>
             </tr>
         </thead>
 
         <tbody>
             <tr>
-                <td> XXX . XXX . XXX - XX </td>
-                <td> Mensal </td>
-                <td> R$ xx,xx</td>
-                <td> dd/mm/aa hh:min:seg </td>
+                <td id="idBilhete"> XXX . XXX . XXX - XX </td>
+                <td id="tipo"> Mensal </td>
+                <td id="dataRecarga"> dd/mm/aa hh:min:seg </td>
             </tr>
         </tbody>
     </table>
@@ -136,4 +132,6 @@
     </div>
 </footer>
 
+<script src="js/utilizacaoBilhete.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </html>

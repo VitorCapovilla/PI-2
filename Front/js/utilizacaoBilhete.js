@@ -1,24 +1,18 @@
-const botao = document.querySelectorAll('.utilizar');
+const botao = document.getElementById('utilizar');
 const code = document.getElementById('number-code');
 
-botao.forEach(element => {
-    element.addEventListener('click', (e) => {
-        var id = e.target.getAttribute('id');
+function utilizar() {
+        console.log("entrou aqui");
 
+        //var id = getElementById('number-code').value;
+       
         var today = new Date();
-        var dd = String(today.getDate()).padStart(2, '0');
-        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-        var yyyy = String(today.getFullYear());
-        var hours = String(today.getHours()).padStart(2, '0');
-        var minutes = String(today.getMinutes()).padStart(2, '0');
-        var seconds = String(today.getSeconds()).padStart(2, '0');
-
-        today = dd + '/' + mm + '/' + yyyy + ' - ' + hours + ':' + minutes + ':' + seconds;
+        var id = getAttribute('id');
 
         localStorage.setItem("data", today);
+        localStorage.setItem("codigo", code.value);
 
-        let codigo = localStorage.getItem("codigo");
-        let data = today;
+        if (id === 'utilizar') localStorage.setItem("data_utilizacao", "DD-MM-YYY HH24.MI.SS");
 
         let objUso = { codigo: parseInt(codigo), data: data };
         let url = `http://localhost:3000/utilizacao`;
@@ -28,6 +22,7 @@ botao.forEach(element => {
                 if (response.data) {
                     const msg = new Comunicado(
                         response.data.codigo,
+                        response.data.tipo,
                         response.data.data
                     );
 
@@ -39,6 +34,7 @@ botao.forEach(element => {
                 if (error.response) {
                     const msg = new Comunicado(
                         error.response.data.codigo,
+                        error.response.data.tipo,
                         error.response.data.data
                     );
 
@@ -46,18 +42,17 @@ botao.forEach(element => {
                 }
             })
 
-        function Comunicado(codigo, data) {
+        function Comunicado(codigo, tipo, data) {
             this.codigo = codigo;
+            this.tipo = tipo;
             this.data = data;
 
             this.get = function () {
                 return (
                     this.codigo + " \n " +
+                    this.tipo + " \n " +
                     this.data
                 );
             }
         }
-    });
-
-
-});
+};

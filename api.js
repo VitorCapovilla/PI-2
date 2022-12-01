@@ -32,7 +32,7 @@ function banco_de_dados() {
             const bdBilhetes = 'CREATE TABLE BILHETESS (NUMERO_BILHETE INTEGER NOT NULL PRIMARY KEY, DATA_CRIACAO varchar(100) NOT NULL)';
             const bdRecarga = 'CREATE TABLE RECARGAS (ID_RECARGA NUMBER NOT NULL PRIMARY KEY, NUMERO_BILHETE INTEGER NOT NULL, TIPO VARCHAR(50) NOT NULL,' +
                 'DATA_RECARGA VARCHAR2 (100) NOT NULL, CONSTRAINT FK_RECARGAS_BILHETESS FOREIGN KEY (NUMERO_BILHETE) REFERENCES BILHETESS(NUMERO_BILHETE))';
-            const bdUtilizacao = 'CREATE TABLE UTILIZAÇÃO (ID_UTILIZACAO INTEGER NOT NULL PRIMARY KEY, NUMERO_BILHETE NOT NULL, DATA_UTILIZACAO VARCHAR(100) NOT NULL,' +
+            const bdUtilizacao = 'CREATE TABLE UTILIZACAO (ID_UTILIZACAO INTEGER NOT NULL PRIMARY KEY, NUMERO_BILHETE NOT NULL, DATA_UTILIZACAO VARCHAR(100) NOT NULL,' +
                 'CONSTRAINT FK_UTILIZACAO_BILHETESS FOREIGN KEY (NUMERO_BILHETE) REFERENCES BILHETESS(NUMERO_BILHETE))';
 
 
@@ -72,9 +72,9 @@ function Bilhetes(bd) {
         try {
             const conexao = await this.bd.getConexao();
             console.log(bilhete.codigo);
-            const insercao = "INSERT INTO RECARGAS (ID_RECARGA, NUMERO_BILHETE, TIPO) VALUES (ID_RECARGA_S.nextval,:0, :1)";
+            const insercao = "INSERT INTO RECARGAS (ID_RECARGA, NUMERO_BILHETE, TIPO, DATA_RECARGA) VALUES (ID_RECARGA_S.nextval,:0, :1, :2)";
 
-            const dados = [bilhete.codigo, bilhete.tipo];
+            const dados = [bilhete.codigo, bilhete.tipo, bilhete.data];
 
             await conexao.execute(insercao, dados, { autoCommit: true });
         }
@@ -148,7 +148,7 @@ async function recarregar(req, res) {
         const sucesso = new Comunicado(
             'Número do bilhete: ' + bilhete.codigo,
             'Tipo do Bilhete: ' + bilhete.tipo,
-            'O bilhete foi gerado com sucesso',
+            'O bilhete foi recarregado com sucesso',
             //mensg
         );
         return res.status(201).json(sucesso);

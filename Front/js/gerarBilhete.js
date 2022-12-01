@@ -3,13 +3,9 @@
 function gerar() {
   console.log('entrou aqui')
 
-  var codigo = new Date().getTime();
-  console.log(codigo);
-
   document.getElementById('frase').innerHTML = 'O ID do seu Bilhete é: '
-  document.getElementById('resp').innerHTML = codigo;
   document.getElementById('link-recarga').innerHTML = 'Recarregue seu Bilhete Aqui';
-
+  
   alert("Bilhete gerado com sucesso! Clique em 'OK' para verifficar seu ID. ");
 } 
 
@@ -20,10 +16,10 @@ function gerar() {
 document.getElementById('id-consultar').addEventListener('click', gerarDados);
 
 function gerarDados() {
-
+    
     localStorage.setItem("codigo", new Date().getTime());
-
-
+    
+    
     var today = new Intl.DateTimeFormat('pt-BR', {
         day: "numeric",
         month: "numeric",
@@ -32,12 +28,13 @@ function gerarDados() {
         minute: "numeric",
         second: "numeric"
     }).format(today);
-
-
+    
+    
     localStorage.setItem("data", today);
     //localStorage.setItem("tipo", "teste");
-
+    
     let codigo = localStorage.getItem("codigo");
+    document.getElementById('resp').innerHTML = codigo;
     // let tipo = localStorage.getItem("tipo");
     let data = today;
 
