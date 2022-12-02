@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF8">
+    <title> Histórico Bilhete BFAI </title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/usoBilhete.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="icon" href="img/guia.png">
+
+</head>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js" ></script>
+
+<header>
+    <div class="logo"><img src="img/BFAI branco.png" alt="" width="20%"></div>
+    <div class="menu">
+        <div class="linha"></div>
+        <div class="linha"></div>
+        <div class="linha"></div>
+    </div>
+    <div class="navbar">
+        <ul class="list-nav">
+            <li class="nav-item">
+                <a class="item-text" href="index.html">HOME</a>
+            </li>
+            <li class="nav-item">
+                <a class="item-text" href="termoUso.html">Gerar Bilhetes</a>
+            </li>
+            <li class="nav-item">
+                <a class="item-text" href="recargaBilhete.html">Recarregar Bilhetes</a>
+            </li>
+            <li class="nav-item">
+                <a class="item-text" href="historicoBilhete.html">Histórico Bilhetes</a>
+            </li>
+            <li class="nav-item">
+                <a class="item-text" href="usoBilhete.html">Usar Bilhetes</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<body>
+
+    <h1 class="title"> Utilização do Bilhete</h1>
+    <p class="content"> 
+        Após inserir o ID do Bilhete no campo indicado e confirmar, irá liberar o acesso ao 
+        transporte público.
+    </p>
+
+
+    <div class="containerID">
+        <form class="solicitaId"> 
+            <label for="number-code"><b> ID do Bilhete: </b></label>
+            <input type="text" maxlength="13" id="number-code" class="input-id" required placeholder="EX: 0123456789123">
+        </form>
+    </div>
+
+    
+    <input type = "submit" value = "Utilizar Bilhete" class="consultar" id="utilizar" onclick="utilizar()">
+
+    <div class="status">
+        <p class="statusID" id="texto"></p>
+        <input type="text" id="data" class="data" disabled="true">
+        <div id="timer" class="timer"></div>
+    </div>
+
+    <div class="statusFinal">
+        <p class="statusIDdois" id="texto2"></p>
+        <input type="text" id="dataFinal" class="data" disabled="true">
+    </div>
+
+    <div class="regras">
+        <h3> Regras para a utilização do bilhete. </h3>
+        <p> Bilhete Único: Pode ser utilizado em quantos tranpostes quiser por um período de 40 minutos.</p>
+        <p> Bilhete Duplo: Pode ser utilizado em quantos tranpostes quiser por um período de 40 minutos.</p>
+        <p> Bilhete Semanal: Pode ser utilizado em quantos tranpostes quiser por um período de 7 dias.</p>
+        <p> Bilhete Mensal: Pode ser utilizado em quantos tranpostes quiser por um período de 30 dias.</p>
+    </div>
+    
+
+</body>
+
+<footer class="rodape">
+    <div class="container">
+        <p class="footer-links">
+            <a class="link-1" href="index.html">HOME</a>
+
+            <a href="termoUso.html">NOVO BILHETE</a>
+
+            <a href="recargaBilhete.html">RECARREGAR</a>
+        </p>
+
+        <p class="coryright">Coryright Ⓒ Bilhete Urbano 2022 -  All Rights Reserved</p>
+    </div>
+</footer>
+
+<script src="js/utilizacaoBilhete.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</html>

@@ -1,0 +1,141 @@
+.title {
+    margin: 5vh;
+    font-size: 25px;
+}
+
+.content {
+    text-align: justify;
+    font-size: 20px;
+    width: 50%;
+    margin-top: 20px;
+    padding-right: 10%;
+    line-height: 1.5;
+    margin-bottom: 70px;
+    align-items: center;
+    margin-left: 50px;
+}
+
+
+
+.solicitaId {
+    margin: 20px;
+    text-indent: 17px;
+    margin-left: 15%;
+    
+}
+
+.containerID{
+    display: inline;
+    margin-top: 50px;
+}
+
+.input-id {
+    margin: 5px;
+    margin-left: 10%;
+    padding: 10px;
+    border-radius: 25px;
+    border-color: #71817f;
+    width: 15%;
+    font-size: 17px;
+    text-align: center;
+}
+
+.solicitaId label {
+    margin-left: 140px;
+}
+
+.solicitaId label, .solicitaId legend {
+    display: block;
+    padding: 12px;
+    font-size: 17px;
+    
+}
+
+.consultar {
+    width: 15%;
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 15px;
+    background-color: #EDDBD5;
+    border: none;
+    transition: 1s;
+    margin-left: 326px;
+}
+
+.consultar:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.statusID{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.status{
+    display: flex;
+    margin-top: 80px;
+    float: center;
+    margin-right: 100px;
+    align-content: center;
+    white-space: nowrap;
+    margin-left: 40px;
+}
+
+.data{
+    background-color: #f5f1ef;
+    border-radius: 15px;
+    margin-left: 20px;
+    border: none;
+    text-align:center;
+    font-size: 16px;
+    padding: 10px 40px;
+    width: 18%;
+    height: 30px;
+    align-content: center;
+}
+
+.timer{
+    background-color: blue;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.statusFinal{
+    display: flex;
+    margin-top: 20px;
+    float: center;
+    margin-right: 100px;
+    align-content: center;
+    white-space: nowrap;
+    margin-left: 40px;
+}
+
+.statusIDdois{
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.data{
+    background-color: #f5f1ef;
+    border-radius: 15px;
+    margin-left: 20px;
+    border: none;
+    text-align:center;
+    font-size: 16px;
+    padding: 10px 40px;
+    width: 35%;
+    height: 30px;
+    align-content: center;
+    margin-top: 20px;
+}
+
+.status, .statusFinal{
+    align-content: center;
+}
+
+.regras{
+    margin-left: 40px;
+    margin-top: 90px;
+    margin-bottom: 20px;
+}

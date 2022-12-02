@@ -65,7 +65,7 @@
 
 .botoes {
     display: flex;
-    margin-left: 650px;
+    margin-left: 820px;
     margin-top: 50px;
 }
 .consultar {
@@ -76,7 +76,7 @@
     background-color: #EDDBD5;
     border: none;
     transition: 1s;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .consultar:hover {
