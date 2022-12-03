@@ -46,7 +46,8 @@ function banco_de_dados() {
 
 }
 
-function Bilhetes(bd) {
+function Bilhetes(bd) 
+{
     this.bd = bd;
 
     this.inclua = async function (bilhete) {
@@ -96,9 +97,13 @@ function Bilhetes(bd) {
 
     this.utilizacao = async function (bilhete) {
         try {
+            
             const conexao = await this.bd.getConexao();
             console.log(bilhete.codigo);
-            const insercao = "INSERT INTO UTILIZACAO (ID_UTILIZACAO, NUMERO_BILHETE) VALUES (ID_UTILIAZCAO_S.nextval,:0)";
+            //const insercao = "INSERT INTO UTILIZACAO (ID_UTILIZACAO, NUMERO_BILHETE) VALUES (ID_UTILIAZCAO_S.nextval,:0)";
+            
+            const sql ="SELECT NUMERO_BILHETE, TIPO, TO_CHAR( DATA_RECARGA, 'YYYY-MM-DD HH24:MI:SS')" +
+                        "FROM RECARGAS WHERE Codigo=:0";
 
             const dados = [bilhete.codigo];
 
@@ -106,7 +111,7 @@ function Bilhetes(bd) {
         }
         catch (erro) {
             console.log(erro)
-            console.log("Erro ao tentar executar o insert na tabela utilização");
+            console.log("Erro ao tentar executar o select.");
         }
     }
 }
@@ -203,7 +208,6 @@ async function utilizar(req, res) {
 
         );
         
-
         console.log(mensg);
         return res.status(201).json(sucesso);
     }
